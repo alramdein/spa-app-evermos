@@ -1,18 +1,31 @@
 import React, { Component } from "react";
+
+import {
+  Route,
+  HashRouter,
+} from "react-router-dom";
+
 import { 
-  Container,
-  Row,
   Col,
   Card,
   Button,
 } from "react-bootstrap";
- 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
+import FilmographyDetail from "../views/FilmographyDetail"
+import FilmographyList from "../views/FilmographyList"
+
 class Filmography extends Component {
   constructor(props){
     super(props)
     this.state = {
-      movies: []
+      movies: [],
+      selectedMovie: ''
     }
+    
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount(){
@@ -20,40 +33,60 @@ class Filmography extends Component {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => this.setState({
-        movies: data
-      }))
-  }  
+          movies: data
+        })
+      )
+  }
+  
+  handleClick(movie) {
+    console.log("cek: ")
+    console.log(movie)
+    this.setState({
+      selectedMovie: movie
+    })
+    this.props.history.push('/filmography/detail');
+  }
 
   render() {
     var movieItems = []
      
-    for(let i=0;i<10;i++){
+    for(const movie of this.state.movies){
       movieItems.push(
-              <Col md="4" className="mt-5">
+              <Col key={movie.id} md="4" className="mt-5">
                 <Card style={{ width: '18rem' }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                   <Card.Body>
-                    <Card.Title>Card Title {i}</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
+                    <Card.Title>{movie.title}</Card.Title>
+                    <Card.Subtitle>
+                      <FontAwesomeIcon style={{color: "#FFDF00"}} icon={faStar} /> 
+                      <div className="d-inline-flex ml-1">
+                        <p>{movie.rt_score}</p>
+                      </div>
+                    </Card.Subtitle>
+                    <Card.Text className="cut-text">
+                      {movie.description}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" onClick={() => this.handleClick(movie)}>See detail</Button>
+                    
                   </Card.Body>
                 </Card>
               </Col>
       )
     }
      
-
     return (
-      <Container> 
-        <h2>Filmography</h2>
-        <p>Here it is the list of Ghibli Movies:</p>
-        <Row>
-              {movieItems}
-        </Row>
-      </Container>
+        <HashRouter>
+            <Route exact path="/filmography">
+              <FilmographyList 
+                movieItems={movieItems}
+              />
+            </Route>
+            <Route exact path="/filmography/detail">
+              <FilmographyDetail 
+                selectedMovie={this.state.selectedMovie}
+              />
+            </Route>
+        </HashRouter>
     );
   }
 }
