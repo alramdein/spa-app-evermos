@@ -1,6 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+$contentBgColor: aquamarine;
+
 #content {
-    margin-left: "100";
+    margin-left: 3;
     border: 10;
+    background-color: $contentBgColor;
 }

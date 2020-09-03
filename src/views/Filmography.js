@@ -29,7 +29,7 @@ class Filmography extends Component {
      
     for(let i=0;i<10;i++){
       movieItems.push(
-              <Col md="3" className="mt-5 mr-3">
+              <Col md="4" className="mt-5">
                 <Card style={{ width: '18rem' }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                   <Card.Body>
