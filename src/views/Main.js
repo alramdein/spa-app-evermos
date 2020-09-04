@@ -17,7 +17,7 @@ class Main extends Component {
   render() {
     return (
         <HashRouter>
-            <div>
+            <div className="main">
                 <div className="header">
                     <img src={logo} alt="logo ghibli movie library"></img>
                     <ul className="nav__links">
@@ -34,6 +34,9 @@ class Main extends Component {
                     {/* <Route path="/filmography/detail" component={FilmographyDetail}/> */}
                     <Route path="/people" component={People}/>
                     <Route path="/about" component={About}/>
+                </div>
+                <div className="footer">
+                    <p>Created by Alif Ramdani</p>
                 </div>
             </div>
         </HashRouter>

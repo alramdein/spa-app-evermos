@@ -12,10 +12,12 @@ import {
 } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faCircle } from '@fortawesome/free-solid-svg-icons'
 
-import FilmographyDetail from "../views/FilmographyDetail"
-import FilmographyList from "../views/FilmographyList"
+import FilmographyDetail from "./FilmographyDetail"
+import FilmographyList from "./FilmographyList"
+
+import moviePoster from "../assets/no-img.png"
 
 class Filmography extends Component {
   constructor(props){
@@ -52,22 +54,23 @@ class Filmography extends Component {
      
     for(const movie of this.state.movies){
       movieItems.push(
-              <Col key={movie.id} md="4" className="mt-5">
-                <Card style={{ width: '18rem' }}>
-                  {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+              <Col key={movie.id} md="4" className="card-list">
+                <Card>
+                  <Card.Img variant="top" src={moviePoster} />
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <Card.Subtitle>
-                      <FontAwesomeIcon style={{color: "#FFDF00"}} icon={faStar} /> 
-                      <div className="d-inline-flex ml-1">
-                        <p>{movie.rt_score}</p>
+                      <FontAwesomeIcon color="#FFDF00" icon={faStar} /> 
+                      <div className="movie-info">
+                        <p>{movie.rt_score} | <span>{movie.release_date}</span></p>
+                      </div>
+                      <div>
                       </div>
                     </Card.Subtitle>
                     <Card.Text className="cut-text">
                       {movie.description}
                     </Card.Text>
                     <Button variant="primary" onClick={() => this.handleClick(movie)}>See detail</Button>
-                    
                   </Card.Body>
                 </Card>
               </Col>
@@ -84,6 +87,7 @@ class Filmography extends Component {
             <Route exact path="/filmography/detail">
               <FilmographyDetail 
                 selectedMovie={this.state.selectedMovie}
+                moviePoster={moviePoster}
               />
             </Route>
         </HashRouter>

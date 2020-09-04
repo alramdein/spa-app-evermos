@@ -17,7 +17,7 @@ class Filmography extends Component {
      
     return (
         <Container> 
-          <div className="header-page">
+          <div className="title-page">
             <h2>Filmography</h2>
             <p>Here it is the list of Ghibli Movies</p>
           </div>
