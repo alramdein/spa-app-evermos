@@ -21,9 +21,9 @@ class Main extends Component {
                 <div className="header">
                     <img src={logo} alt="logo ghibli movie library"></img>
                     <ul className="nav__links">
-                        <li><NavLink className="nav__style" to="/filmography">Filmography</NavLink></li>
-                        <li><NavLink className="nav__style" to="/people">People</NavLink></li>
-                        <li><NavLink className="nav__style" to="/about">About</NavLink></li>
+                        <li><NavLink className="nav__item" to="/filmography">Filmography</NavLink></li>
+                        <li><NavLink className="nav__item" to="/people">People</NavLink></li>
+                        <li><NavLink className="nav__item" to="/about">About</NavLink></li>
                     </ul>
                 </div>
                 <div className="content" id="content">

@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
-$contentBgColor: aquamarine;
-$firstBgColor: #2A2924;
-$secondbgColor: #24252A;
-$secondTextColor: aliceblue;
+$firstBgColor: #111423;
+$secondBgColor: #1b1e31;
+$firstTextColor: aliceblue;
+$hoverTextColor: #6d6dc4;
 $fontFam: 'Montserrat', sans-serif;
 
 .main {
@@ -14,7 +14,7 @@ $fontFam: 'Montserrat', sans-serif;
 
 .header {
     box-sizing: border-box;
-    background-color: $secondbgColor;
+    background-color: $secondBgColor;
     padding: 20px;
     padding-bottom: 10px;
     display: flex;
@@ -34,7 +34,7 @@ $fontFam: 'Montserrat', sans-serif;
     li {
         display: inline-block;
         padding: 0px 20px;
-        NavLink {
+        .nav__item {
             transition: all 0.3s ease 0s;
             &:hover {
                 color: #0088a9;
@@ -43,8 +43,12 @@ $fontFam: 'Montserrat', sans-serif;
     }
 }
 
+// @media screen and (max-width: 600px) {
+
+// }
+
 .title-page {
-    color: $secondTextColor;
+    color: $firstTextColor;
     font-family: 'Montserrat', sans-serif;
     padding-top: 26px;
 }
@@ -67,6 +71,7 @@ $fontFam: 'Montserrat', sans-serif;
 .card-list {
     margin-top:  ($spacer * 3) !important;
     width: 18rem;
+    color: $secondBgColor;
     span {
         opacity: 50%;
     }
@@ -84,16 +89,31 @@ $fontFam: 'Montserrat', sans-serif;
         float: left;
         margin-right: 10px;
     }
-    Card\.Title {
-        margin-bottom: 1000px;
+}
+
+.people-content {
+    font-family: $fontFam;
+    color: $firstTextColor;
+    tbody tr:hover {
+        color: $hoverTextColor
+    }
+}
+
+.about {
+    @extend .title-page;
+    img {
+        float: left;
+        height: 300px;
+        width: 300px;
+        margin: 0px 20px 20px 0px;
     }
 }
 
 .footer {
     box-sizing: border-box;
     padding-top: 20px;
-    background-color: $secondbgColor;
-    color: $secondTextColor;
+    background-color: $secondBgColor;
+    color: $firstTextColor;
     font-family: $fontFam;
     display: flex;
     justify-content: center;

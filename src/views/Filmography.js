@@ -41,8 +41,6 @@ class Filmography extends Component {
   }
   
   handleClick(movie) {
-    console.log("cek: ")
-    console.log(movie)
     this.setState({
       selectedMovie: movie
     })
@@ -50,12 +48,13 @@ class Filmography extends Component {
   }
 
   render() {
+    console.log(this.state.movies)
     var movieItems = []
      
     for(const movie of this.state.movies){
       movieItems.push(
               <Col key={movie.id} md="4" className="card-list">
-                <Card>
+                <Card style={{color: "#1b1e31"}}> 
                   <Card.Img variant="top" src={moviePoster} />
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
