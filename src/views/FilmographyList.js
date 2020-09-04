@@ -17,8 +17,10 @@ class Filmography extends Component {
      
     return (
         <Container> 
+          <div className="header-page">
             <h2>Filmography</h2>
-            <p>Here it is the list of Ghibli Movies:</p>
+            <p>Here it is the list of Ghibli Movies</p>
+          </div>
             <Row>
                     {this.props.movieItems}
             </Row>

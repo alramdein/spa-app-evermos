@@ -11,18 +11,21 @@ import {
 import People from "./People";
 import Filmography from "./Filmography";
 import About from "./About"; 
+import logo from "../assets/logo-ghibli-movie-library_2.png"; 
 
 class Main extends Component {
   render() {
     return (
         <HashRouter>
             <div>
-                <h1>Ghibli Movie Library</h1>
-                <ul className="header">
-                    <li><NavLink to="/filmography">Filmography</NavLink></li>
-                    <li><NavLink to="/people">People</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                </ul>
+                <div className="header">
+                    <img src={logo} alt="logo ghibli movie library"></img>
+                    <ul className="nav__links">
+                        <li><NavLink className="nav__style" to="/filmography">Filmography</NavLink></li>
+                        <li><NavLink className="nav__style" to="/people">People</NavLink></li>
+                        <li><NavLink className="nav__style" to="/about">About</NavLink></li>
+                    </ul>
+                </div>
                 <div className="content" id="content">
                     <Route exact path="/">
                         <Redirect to="/filmography"/>
