@@ -43,9 +43,11 @@ $fontFam: 'Montserrat', sans-serif;
     }
 }
 
-// @media screen and (max-width: 600px) {
-
-// }
+@media screen and (max-width: 600px) {
+    .nav__links {
+        display: none;
+    }
+}
 
 .title-page {
     color: $firstTextColor;
@@ -89,6 +91,14 @@ $fontFam: 'Montserrat', sans-serif;
         float: left;
         margin-right: 10px;
     }
+    .header {
+        color: $firstTextColor;
+        float: left;
+    }
+}
+
+.overflow-table {
+    overflow-x:auto
 }
 
 .people-content {

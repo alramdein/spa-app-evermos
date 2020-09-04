@@ -22,7 +22,7 @@ class Filmography extends Component {
             <p>Here it is the list of Ghibli Movies</p>
           </div>
             <Row>
-                    {this.props.movieItems}
+                {this.props.movieItems}
             </Row>
         </Container>
     );

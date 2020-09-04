@@ -49,12 +49,12 @@ class People extends Component {
     return (
       <Container> 
             <Row>
-              <Col sm="12" md="12">
+              <Col xs="12" sm="12" md="12" xl="12">
                 <div className="title-page">
                   <h2>People</h2>
                   <p>Here it is the list of people that featured on Ghibli Movies</p>
                 </div>
-                <div>
+                <div className="overflow-table">
                   <Table className="people-content" striped bordered hover>
                     <thead>
                       <tr>

@@ -53,7 +53,7 @@ class Filmography extends Component {
      
     for(const movie of this.state.movies){
       movieItems.push(
-              <Col key={movie.id} md="4" className="card-list">
+              <Col key={movie.id} xs="12" sm="12" md="4" xl="4" className="card-list">
                 <Card style={{color: "#1b1e31"}}> 
                   <Card.Img variant="top" src={moviePoster} />
                   <Card.Body>

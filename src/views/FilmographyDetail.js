@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 class Filmography extends Component {
   constructor(props){
@@ -23,11 +23,13 @@ class Filmography extends Component {
   render() {
     console.log(this.props.selectedMovie)
     return (
-        <Container>
+        <Container className="detail-movie">
+            <FontAwesomeIcon size="lg" icon={faArrowLeft} /> 
             <h2 className="title-page">Filmography Detail</h2>
+            
             <Row>
                 <Col lg="2" md="2" sm="0" xs="0"></Col>
-                <Col lg="8" md="8" sm="12" xs="12" className="detail-movie">
+                <Col lg="8" md="8" sm="12" xs="12" >
                   <img variant="top" src={this.state.moviePoster} />
                   <Card>
                     <Card.Body>
