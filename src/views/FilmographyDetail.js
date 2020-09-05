@@ -17,7 +17,6 @@ class Filmography extends Component {
         selectedMovie: this.props.selectedMovie,
         moviePoster: this.props.moviePoster,
     }
-    
   }
 
   render() {

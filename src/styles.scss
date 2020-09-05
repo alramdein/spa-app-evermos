@@ -15,14 +15,16 @@ $fontFam: 'Montserrat', sans-serif;
 .header {
     box-sizing: border-box;
     background-color: $secondBgColor;
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
     padding-bottom: 10px;
     display: flex;
     img {
-        float: left;
         width: 250px;
         height: 15px;
         margin-top: 10px;
+    }
+    .icon-bars {
+        display: none;
     }
 }
 
@@ -31,21 +33,58 @@ $fontFam: 'Montserrat', sans-serif;
     padding: 5px;
     font-family: $fontFam;
     font-weight: 700;
+    overflow: hidden;
     li {
         display: inline-block;
-        padding: 0px 20px;
+        margin: 0px 20px;
         .nav__item {
+            text-decoration: none;
             transition: all 0.3s ease 0s;
             &:hover {
                 color: #0088a9;
             }
-        }
+        } 
     }
 }
 
-@media screen and (max-width: 600px) {
+//responsive navbar
+@media screen and (max-width: 640px) {
+    .header {
+        display: block;
+        .icon-bars {
+            margin: 30px 20px 0px 0px;
+            float: right;
+            display: block;
+            cursor: pointer;
+        }
+    }
     .nav__links {
-        display: none;
+        li {
+            display: block;
+            .nav__item {
+                display: none;
+            }
+            
+        }
+    }
+
+    //when the icon bars is clicked
+    .nav__links.responsive {
+        position: relative;
+        li {
+            .nav__item {
+                float: none;
+                display: block ;
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    .icon-bars {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
 
