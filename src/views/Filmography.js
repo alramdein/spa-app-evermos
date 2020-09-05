@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import FilmographyDetail from "./FilmographyDetail"
 import FilmographyList from "./FilmographyList"

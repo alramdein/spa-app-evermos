@@ -1,5 +1,6 @@
 {
   "name": "spa-evermoss",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
@@ -20,7 +22,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

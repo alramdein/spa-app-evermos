@@ -35,7 +35,7 @@ class Filmography extends Component {
             <Row className="content-movie">
                 <Col lg="1" md="1" sm="0" xs="0"></Col>
                 <Col lg="4" md="4" sm="12" xs="12" >
-                  <img variant="top" src={this.state.moviePoster} />
+                  <img variant="top" src={this.state.moviePoster} alt="Movie Poster"/>
                 </Col>
                 <Col lg="6" md="6" sm="12" xs="12" >
                   <Card>

@@ -32,7 +32,7 @@ class People extends Component {
     console.log(this.state.people)
     var listPeople = []
 
-    if(this.state.people != '') {
+    if(this.state.people !== '') {
       for(const [index, person] of this.state.people.entries()) {
         listPeople.push(
           <tr key={index}>
