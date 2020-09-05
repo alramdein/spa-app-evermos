@@ -25,10 +25,6 @@ class Main extends Component {
   state = {
     navClass: "nav__links"    
   }
-  
-  componentWillMount() {
-      
-  }
 
   handleClick() {
     if(this.state.navClass === "nav__links") {

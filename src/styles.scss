@@ -124,15 +124,26 @@ $fontFam: 'Montserrat', sans-serif;
 
 .detail-movie {
     margin-top: 20px;
+    .arrow-back {
+        color: $firstTextColor;
+        :hover {
+            cursor: pointer;
+        }
+    }
+
     img {
         width: 300px;
         height: 300px;
         float: left;
         margin-right: 10px;
+        margin-bottom: 10px;
     }
     .header {
         color: $firstTextColor;
         float: left;
+    }
+    .content-movie {
+        margin-top: 20px;
     }
 }
 

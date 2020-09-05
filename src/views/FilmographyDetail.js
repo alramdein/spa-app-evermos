@@ -7,6 +7,8 @@ import {
   Card,
 } from "react-bootstrap";
 
+import { withRouter } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,19 +19,25 @@ class Filmography extends Component {
         selectedMovie: this.props.selectedMovie,
         moviePoster: this.props.moviePoster,
     }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.props.history.push('/filmography');
   }
 
   render() {
-    console.log(this.props.selectedMovie)
     return (
         <Container className="detail-movie">
-            <FontAwesomeIcon size="lg" icon={faArrowLeft} /> 
+            <FontAwesomeIcon className="arrow-back" onClick={this.handleClick} size="lg" icon={faArrowLeft} /> 
             <h2 className="title-page">Filmography Detail</h2>
-            
-            <Row>
-                <Col lg="2" md="2" sm="0" xs="0"></Col>
-                <Col lg="8" md="8" sm="12" xs="12" >
+            <Row className="content-movie">
+                <Col lg="1" md="1" sm="0" xs="0"></Col>
+                <Col lg="4" md="4" sm="12" xs="12" >
                   <img variant="top" src={this.state.moviePoster} />
+                </Col>
+                <Col lg="6" md="6" sm="12" xs="12" >
                   <Card>
                     <Card.Body>
                         <Card.Title>{this.state.selectedMovie.title}</Card.Title>
@@ -49,7 +57,7 @@ class Filmography extends Component {
                     </Card.Body>
                   </Card>
                 </Col>
-                <Col lg="2" md="2" sm="0" xs="0"></Col>
+                <Col lg="1" md="1" sm="0" xs="0"></Col>
             </Row>
         </Container> 
             
@@ -57,4 +65,4 @@ class Filmography extends Component {
   }
 }
  
-export default Filmography;
+export default withRouter(Filmography);

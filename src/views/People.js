@@ -40,7 +40,6 @@ class People extends Component {
             <td>{person.name}</td>
             <td>{person.age}</td>
             <td>{person.gender}</td>
-            {/* <td>{person.films}</td> */}
           </tr>
         )
       }
@@ -62,7 +61,6 @@ class People extends Component {
                         <th>Name</th>
                         <th>Age</th>
                         <th>Gender</th>
-                        {/* <th>Films</th> */}
                       </tr>
                     </thead>
                     <tbody>
