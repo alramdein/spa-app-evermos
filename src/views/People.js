@@ -20,16 +20,12 @@ class People extends Component {
     const apiUrl = "https://ghibliapi.herokuapp.com/people"
     fetch(apiUrl)
       .then((response) => response.json())
-      // .then((data) => 
-      //   fetch(apiUrl)
-      //   .then((response) => response.json()))
       .then((data) => this.setState({
         people: data
       }))
   } 
 
   render() {
-    console.log(this.state.people)
     var listPeople = []
 
     if(this.state.people !== '') {

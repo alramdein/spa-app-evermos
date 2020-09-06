@@ -6,13 +6,6 @@ import {
 } from "react-bootstrap";
 
 class Filmography extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-        movieItems: this.props.movieItems,
-    }
-  }
-
   render() {
      
     return (

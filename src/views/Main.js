@@ -56,7 +56,6 @@ class Main extends Component {
                         <Redirect to="/filmography"/>
                     </Route>
                     <Route path="/filmography" component={Filmography}/>
-                    {/* <Route path="/filmography/detail" component={FilmographyDetail}/> */}
                     <Route path="/people" component={People}/>
                     <Route path="/about" component={About}/>
                 </div>

@@ -48,7 +48,6 @@ class Filmography extends Component {
   }
 
   render() {
-    console.log(this.state.movies)
     var movieItems = []
      
     for(const movie of this.state.movies){

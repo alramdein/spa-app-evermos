@@ -144,7 +144,13 @@ $fontFam: 'Montserrat', sans-serif;
     }
     .content-movie {
         margin-top: 20px;
+        .information {    
+            span {
+                margin: 5px 0px;
+            }
+        }
     }
+
 }
 
 .overflow-table {
