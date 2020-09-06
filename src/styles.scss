@@ -113,12 +113,16 @@ $fontFam: 'Montserrat', sans-serif;
     margin-top:  ($spacer * 3) !important;
     width: 18rem;
     color: $secondBgColor;
-    span {
-        opacity: 50%;
-    }
     .movie-info {
         display: inline-flex;
         margin-left: 1px;
+        .rating {
+            margin-left: 5px;
+        }
+        .year {
+            color: #afafaf;
+            margin-left: 7px;
+        }
     }
 }
 

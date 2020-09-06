@@ -49,7 +49,6 @@ class Filmography extends Component {
 
   render() {
     var movieItems = []
-     
     for(const movie of this.state.movies){
       movieItems.push(
               <Col key={movie.id} xs="12" sm="12" md="4" xl="4" className="card-list">
@@ -60,8 +59,9 @@ class Filmography extends Component {
                     <Card.Subtitle>
                       <FontAwesomeIcon color="#FFDF00" icon={faStar} /> 
                       <div className="movie-info">
-                        <p>{movie.rt_score} | <span>{movie.release_date}</span></p>
-                      </div>
+                        <span className="rating">{movie.rt_score}  </span>
+                        <span className="year">({movie.release_date})</span>
+                      </div> 
                       <div>
                       </div>
                     </Card.Subtitle>
