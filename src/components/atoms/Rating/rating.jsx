@@ -4,14 +4,13 @@ import "./style.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-const Year = (props) => {
+const Rating = (props) => {
     return(
         <div className="rating"> 
           <FontAwesomeIcon color="#FFDF00" icon={faStar} /> 
-          <span className="rating">{props.rating}</span>
+          <span className="rt_score">{props.rating}</span>
         </div>
-            
     )
 }
 
-export default Year;
+export default Rating;
