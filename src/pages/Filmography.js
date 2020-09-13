@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import {
   Route,
@@ -11,20 +12,21 @@ import FilmographyList from "../components/templates/FilmographyList"
 import moviePoster from "../assets/no-img.png"
 
 
-// const {Provider, Consumer} = React.createContext()
-
 class Filmography extends Component {
   state = {
     movies: []
   }
-  componentDidMount(){
+  async componentDidMount(){
     const apiUrl = 'https://ghibliapi.herokuapp.com/films'
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => this.setState({
-          movies: data
-        })
-      )
+    try {
+      const resp = await axios.get(apiUrl)
+      const movies = resp.data
+      this.setState({
+        movies: movies
+      })
+    } catch(err) {
+      console.error(err)
+    }
   }
 
   render() {

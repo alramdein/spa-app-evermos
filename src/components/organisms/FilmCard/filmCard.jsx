@@ -10,7 +10,7 @@ import {
 import Sublabel from "../../molecules/Sublabel/sublabel"
 
 const FilmCard = (props) => {
-    const handleClick = (movie, poster) => {
+    const seeMovieDetail = (movie, poster) => {
         props.history.push({
             pathname: '/filmography/detail',
             movie: movie,
@@ -29,7 +29,7 @@ const FilmCard = (props) => {
                 <Card.Text className="cut-text">
                     {props.movie.description}
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleClick(props.movie, props.moviePoster)}>See detail</Button>
+                <Button variant="primary" onClick={() => seeMovieDetail(props.movie, props.moviePoster)}>See detail</Button>
             </Card.Body>
         </Card>   
     )

@@ -11,7 +11,7 @@ import moviePoster from "../../assets/no-img.png"
 
 class Filmography extends Component {
   render() {
-    var movieItems = []
+    let movieItems = []
     for(const movie of this.props.movies){
       movieItems.push(
         <Col key={movie.id} xs="12" sm="12" md="4" xl="4" className="card-list">

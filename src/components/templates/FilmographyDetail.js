@@ -16,10 +16,10 @@ class Filmography extends Component {
   constructor(props){
     super(props)
 
-    this.handleClick = this.handleClick.bind(this)
+    this.backToFilmographyList = this.backToFilmographyList.bind(this)
   }
 
-  handleClick() {
+  backToFilmographyList() {
     this.props.history.push('/filmography');
   }
 
@@ -28,7 +28,7 @@ class Filmography extends Component {
       return (
         <Container className="detail-movie">
           <div className="arrow-back">
-            <FontAwesomeIcon  onClick={this.handleClick} size="lg" icon={faArrowLeft} /> 
+            <FontAwesomeIcon  onClick={this.backToFilmographyList} size="lg" icon={faArrowLeft} /> 
           </div>
             <h2 className="title-page">Filmography Detail</h2>
             <Row className="content-movie">
