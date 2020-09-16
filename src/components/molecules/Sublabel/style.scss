@@ -1,7 +1,9 @@
+$yearColor: rgb(173, 173, 173);
+
 .sublabel {
-    display: flex;
+    display: inline-block;
     .year {
-        color: grey;
+        color: $yearColor;
         margin-left: 7px;
     }
 }

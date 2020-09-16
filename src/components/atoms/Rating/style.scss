@@ -1,7 +1,6 @@
 .rating {
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
     .rt_score{
-        margin-left: 3px;
+        margin-left: 4px;
     }
 }
